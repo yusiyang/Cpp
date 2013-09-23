@@ -16,17 +16,20 @@ int main(){
 int m,n;
 bool flag=true;
 while (flag){
+cout<<"***************************"<<endl;
 cout<<"请输入整数m的值："<<endl;
-cin>>m;
-cout<<"请输入整数n的值："<<endl;
-cin>>n;
-if((m<n)||(m<=0)||(n<0))
-  cout<<"请正确输入"<<endl;
+if (cin>>m==0  ||(m<=0) )
+  {cout<<"请正确输入"<<endl;cin.clear();cin.sync();continue;}
+
 if(m>30)
-  cout<<"有点大哦亲，换个小点的数试试吧！"<<endl;
+  {cout<<"有点大哦亲，换个小点的数试试吧！"<<endl;cin.clear();cin.sync();continue;}
+
+cout<<"请输入整数n的值："<<endl;
+if (cin>>n==0 || (m<n)||(n<0))
+  {cout<<"请正确输入"<<endl;cin.clear();cin.sync();continue;}
 else flag=false;
 }
 cout<<"组合值为："<<combination(m,n)<<endl;
 system("pause");
-main();
+return 0;
 }
