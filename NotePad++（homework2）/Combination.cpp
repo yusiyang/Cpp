@@ -1,0 +1,35 @@
+ï»¿#include<iostream>
+using namespace std;
+double factorial(double f){
+if(f==0||f==1){
+return 1;
+}
+if(f>1){
+return f*factorial(f-1);
+}
+}
+int combination(int m,int n){
+return factorial(m)/(factorial(n)*factorial(m-n));
+ }
+
+int main(){
+int m,n;
+bool flag=true;
+while (flag){
+cout<<"***************************"<<endl;
+cout<<"ÇëÊäÈëÕûÊýmµÄÖµ£º"<<endl;
+if (cin>>m==0  ||(m<=0) )
+  {cout<<"ÇëÕýÈ·ÊäÈë"<<endl;cin.clear();cin.sync();continue;}
+
+if(m>30)
+  {cout<<"ÓÐµã´óÅ¶Ç×£¬»»¸öÐ¡µãµÄÊýÊÔÊÔ°É£¡"<<endl;cin.clear();cin.sync();continue;}
+
+cout<<"ÇëÊäÈëÕûÊýnµÄÖµ£º"<<endl;
+if (cin>>n==0 || (m<n)||(n<0))
+  {cout<<"ÇëÕýÈ·ÊäÈë"<<endl;cin.clear();cin.sync();continue;}
+else flag=false;
+}
+cout<<"×éºÏÖµÎª£º"<<combination(m,n)<<endl;
+system("pause");
+return 0;
+}
