@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 double power(float x,int y){
 	if((x==0)&&(y!=0)){

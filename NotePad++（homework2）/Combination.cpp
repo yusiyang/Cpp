@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 using namespace std;
 double factorial(double f){
 if(f==0||f==1){
