@@ -1,0 +1,27 @@
+#include<string>
+class PhoneCard
+{
+private:
+	long cardNumber;
+	int password;
+protected:
+	long connectNumber;
+	double balance;
+public:
+	PhoneCard(long cn,int pw,double b,long ctn);
+	virtual void performDial(){};
+	long getCardNum();
+	int getPassword();
+};
+
+class Card_201:public PhoneCard
+{
+private:
+	double additoryFee;
+	bool connected;
+public:
+	Card_201(long cn,int pw,double b,long ctn=201,double dtf=0.03,bool cd=false);
+	void performConnect(long cn, int pw);
+	double getBalance();
+	void performDial();
+};
